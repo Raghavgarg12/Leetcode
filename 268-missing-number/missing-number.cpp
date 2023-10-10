@@ -4,12 +4,15 @@ public:
     int missingNumber(vector<int>& nums) {
         sort(nums.begin(),nums.end());
         int n=nums.size();
-        int i=0;
-        for(i=0;i<n;i++)
-        {
-            if(nums[i]!=i)
-                return i;
-        }
-        return i;
+        int s=accumulate(nums.begin(),nums.end(),0);
+        int sum=(n*(n+1))/2;
+        return abs(s-sum);
+        // while()
+        // for(i=0;i<n;i++)
+        // {
+        //     if(nums[i]!=i)
+        //         return i;
+        // }
+        // return i;
     }
 };
