@@ -7,12 +7,5 @@ public:
         int s=accumulate(nums.begin(),nums.end(),0);
         int sum=(n*(n+1))/2;
         return abs(s-sum);
-        // while()
-        // for(i=0;i<n;i++)
-        // {
-        //     if(nums[i]!=i)
-        //         return i;
-        // }
-        // return i;
     }
 };
