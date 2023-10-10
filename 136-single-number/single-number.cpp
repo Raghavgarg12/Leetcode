@@ -2,8 +2,8 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         int n=nums.size();
-        if (n==1) return nums[0];
-        sort(nums.begin(),nums.end());
+        //if (n==1) return nums[0];
+        //sort(nums.begin(),nums.end());
         int i=0;
         set<int> s;
         for (int x : nums)
