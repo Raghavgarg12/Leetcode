@@ -26,8 +26,7 @@ public:
         int curMax = 0, maxTillNow = INT_MIN;
         for(auto c : nums)
             curMax = max(c, curMax + c),
-            maxTillNow = max(maxTillNow, curMax),
-            cout<<maxTillNow<<endl;
+            maxTillNow = max(maxTillNow, curMax);
         return maxTillNow;
     }
 };
