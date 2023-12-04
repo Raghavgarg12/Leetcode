@@ -6,16 +6,13 @@ public:
         int mid,m,ans;
         while(low<=high){
             mid=(low+high)/2;
-            // cout<<mid<<endl;
             m=check(nums,mid);
-            // if(m==k) ans=min(mid,ans);
             if(m>k) low=mid+1;
             else 
             {
                 high=mid-1;
                 ans=mid;
             }
-
         }
         return ans;
     }
@@ -29,11 +26,6 @@ public:
                 ans++;
                 count=i;
             }
-            // else if(count==mid){
-            //     ans++;
-            //     count=0;
-            // }
-            cout<<ans<<endl;
         }
         return ans+1;
     }
