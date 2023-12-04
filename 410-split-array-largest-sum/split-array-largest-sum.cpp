@@ -1,8 +1,8 @@
 class Solution {
 public:
     int splitArray(vector<int>& nums, int k) {
-        int low=*max_element(nums.begin(),nums.end());
-        int high=accumulate(nums.begin(),nums.end(),0);
+        int low=0,high=0;
+        for(auto i:nums) low=max(low,i), high+=i;
         int mid,m,ans;
         while(low<=high){
             mid=(low+high)/2;
