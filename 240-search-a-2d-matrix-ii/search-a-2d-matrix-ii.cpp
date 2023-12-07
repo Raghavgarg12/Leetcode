@@ -27,20 +27,20 @@ public:
         cout<<cmax<<endl;
         row.clear();
         col.clear();
-        for(i=rmin;i<=rmax;i++){
-            if(matrix[i][cmin]<=target && target<=matrix[i][cmax]) row.push_back(i);
-        }
-        for(i=cmin;i<=cmax;i++){
-            if(matrix[rmin][i]<=target && target<=matrix[rmax][i]) col.push_back(i);
-        }
-        for(auto i:row){
-            rmin=min(i,rmin);
-            rmax=max(rmax,i);
-        }      
-        for(auto i:col){
-            cmin=min(cmin,i);
-            cmax=max(cmax,i);
-        }
+        // for(i=rmin;i<=rmax;i++){
+        //     if(matrix[i][cmin]<=target && target<=matrix[i][cmax]) row.push_back(i);
+        // }
+        // for(i=cmin;i<=cmax;i++){
+        //     if(matrix[rmin][i]<=target && target<=matrix[rmax][i]) col.push_back(i);
+        // }
+        // for(auto i:row){
+        //     rmin=min(i,rmin);
+        //     rmax=max(rmax,i);
+        // }      
+        // for(auto i:col){
+        //     cmin=min(cmin,i);
+        //     cmax=max(cmax,i);
+        // }
         for(i=rmin;i<=rmax;i++){
             for(j=cmin;j<=cmax;j++){
                 if(matrix[i][j]==target) return true;
