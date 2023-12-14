@@ -2,7 +2,6 @@ class Solution {
 public:
     string removeOuterParentheses(string s) {
         int n =s.length();
-        cout<<n;
         int i,l=0,x=0;
         for(i=0;i<n;i++){
             if(s.at(i)=='(') l++;
