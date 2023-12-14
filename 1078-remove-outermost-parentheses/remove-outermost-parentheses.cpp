@@ -5,7 +5,6 @@ public:
         cout<<n;
         int i,l=0,x=0;
         for(i=0;i<n;i++){
-            cout<<i;
             if(s.at(i)=='(') l++;
             else if (s.at(i)==')') l--;
             if(l==0) {
