@@ -21,12 +21,11 @@ public:
                     k--;
                     continue;
                 }
-                ans=ans+" "+s.substr(i+1,k-i);
+                ans=ans+s.substr(i+1,k-i)+" ";
                 k=i-1;
             }
         }
-        ans=ans+" "+s.substr(0,k+1);
-    ans.erase(0,1);
+        ans=ans+s.substr(0,k+1);
     return ans;
     }
 };
