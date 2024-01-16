@@ -9,7 +9,6 @@ public:
         }
         for(i=0;i<n;i++){
             if(map[t.at(i)]<=0) return false;
-            cout<<map[t.at(i)];
             map[t.at(i)]--;
         }
         return true;
