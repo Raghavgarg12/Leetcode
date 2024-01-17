@@ -17,17 +17,11 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        if (s.length() != t.length()) {
-            return false;
-        }
+        if (s.length() != t.length()) return false;
         int charCountS[26] = {0};
         int charCountT[26] = {0};
-        for (char c : s) {
-            charCountS[c - 'a']++;
-        }
-        for (char c : t) {
-            charCountT[c - 'a']++;
-        }
+        for (char c : s) charCountS[c - 'a']++;
+        for (char c : t) charCountT[c - 'a']++;
         return memcmp(charCountS, charCountT, sizeof(charCountS)) == 0;
     }
 };
