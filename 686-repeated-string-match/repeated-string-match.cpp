@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int solve(string &a, string &b){
+    int repeatedStringMatch(string a, string b) {
         int n=a.length(),m=b.length();
         if(m==0) return 0;
         int x=ceil((double)m/n);
@@ -12,9 +12,6 @@ public:
             s+=a;
             i++;
         }
-        return i;
-    }
-    int repeatedStringMatch(string a, string b) {
-        return solve(a,b);  
+        return i; 
     }
 };
