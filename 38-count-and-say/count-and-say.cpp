@@ -10,16 +10,12 @@ public:
                 sum=1;
             }
         }
-        // ss += std::to_string(sum) + s[j-1];
         return ss;
     }
     string countAndSay(int n) {
         int i;
         string ans="1";
-        for(i=1;i<n;i++){
-            ans=solve(ans);
-            cout<<ans<<endl;
-        }
+        for(i=1;i<n;i++) ans=solve(ans);
         return ans;
     }
 };
