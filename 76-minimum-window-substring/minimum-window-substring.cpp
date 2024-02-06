@@ -11,19 +11,20 @@ public:
         unordered_map<char,int>window;
         int ans[3]={-1,0,0};
         while(j<m){
+            char st=s[j];
             window[s[j]]++;
-            if(mp.find(s[j])!=mp.end() && window[s[j]] == mp[s[j]]) formed++;
+            if(mp.find(st)!=mp.end() && window[st] == mp[st]) formed++;
             while(formed==req && i<=j){
                 if(ans[0]==-1 || j-i+1<ans[0]){
                     ans[0]=j-i+1;
                     ans[1]=i;
                     ans[2]=j;
                 }
-                window[s[i]]--;
-                if(mp.find(s[i])!=mp.end() && window[s[i]]<mp[s[i]]) formed--;
+                st=s[i];
+                window[st]--;
+                if(mp.find(st)!=mp.end() && window[st]<mp[st]) formed--;
                 i++;
             }
-            cout<<ans[0]<<ans[1]<<ans[2]<<endl;
             j++;
         }
         if(ans[0]==-1) return "";
