@@ -5,8 +5,9 @@ public:
         if (s.empty() || t.empty() || m<n) return "";
         int i=0,j=0,formed=0;
         unordered_map<char,int>mp;
-        for(i=0;i<n;i++) mp[t[i]]++;
-        i=0;
+        // for(i=0;i<n;i++) mp[t[i]]++;
+        for (char c : t) mp[c]++;
+        // i=0;
         int req=mp.size();
         unordered_map<char,int>window;
         int ans[3]={-1,0,0};
