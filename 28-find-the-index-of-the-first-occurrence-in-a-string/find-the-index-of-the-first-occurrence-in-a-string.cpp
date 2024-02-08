@@ -1,8 +1,33 @@
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-            return haystack.find(needle);
-//         int n=haystack.length(),m=needle.length();
+            // return haystack.find(needle);
+        int n=haystack.length(),m=needle.length();
+        vector<int>pos(m, 0);
+        int i=0,j=1;
+        while(j<m){
+            if(needle[i]==needle[j]){
+                pos[j]=i+1;
+                i++;
+                j++;
+            }
+            else if(i) i=pos[i-1];
+            else j++;
+        }
+        i=0;
+        j=0;
+        while(j<n && i<m){
+            if(needle[i]==haystack[j]){
+                i++;
+                j++;
+            }
+            else if(i) i=pos[i-1];
+            else j++;
+            cout<<i<<endl;
+            if (i == m) return j-m;
+        }
+        cout<<j<<endl;
+        return (i == m) ? j-1 : -1;
 //         int i,j=0;
 //         for(i=0;i<n;i++){
 //             if(haystack[i]==needle[j]) j++;
