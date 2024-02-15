@@ -6,8 +6,12 @@ public:
         sort(nums.begin(),nums.end());
         long long sum = accumulate(nums.begin(), nums.end()-1, 0LL);
         for(int i=n-1;i>=2;i--){
-            if(sum>nums[i]) return sum+nums[i];
-            else sum-=nums[i-1];
+            if(sum>nums[i]) {
+                return sum+nums[i];
+            }
+            else {
+                sum-=nums[i-1];
+            }
         }
         return -1;
     }
