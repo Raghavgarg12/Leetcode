@@ -17,7 +17,7 @@ public:
             // find the root of i
             // current ans is min of ans[j*j] + ans[i - j*j]
             int root = sqrt(i), mn = INT_MAX;
-            for(int j=root; j>=1; j--){
+            for(int j=1; j<=root; j++){
                 mn = min(mn, dp[j*j] + dp[i - j*j]);
             }
             dp[i] = mn;
