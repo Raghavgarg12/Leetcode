@@ -6,10 +6,12 @@ public:
         vector<int>v;
         for(auto a :mp) v.push_back(a.second);
         sort(v.begin(),v.end());
+        int m=v.size();
+        int i=0;
     while(k>0){
-        k-=v[0];
-        if(k>=0) v.erase(v.begin());
+        k-=v[i++];
+        if(k>=0) m--;
     }
-    return v.size();
+    return m;
     }
 };
