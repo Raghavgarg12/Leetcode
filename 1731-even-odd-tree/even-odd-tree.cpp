@@ -19,12 +19,9 @@ public:
         while(!q.empty()){
             int len=q.size();
             int prev = flag ? INT_MAX : INT_MIN;
-            cout<<"flag "<<flag<<endl;
             for(i=0;i<len;i++){
                 TreeNode* node=q.front();
                 q.pop();
-                cout<<"prev "<<prev<<endl;
-                cout<<node->val<<endl;
                 if(flag){
                     if(node->val%2 !=0 || node->val>=prev) return false;
                 }
