@@ -4,12 +4,12 @@ public:
         unordered_map<char,int>mp;
         int i;
         for(i=0;i<s.length();i++) mp[s[i]]++;
-        string ans;
-        cout<<mp['1'];
-        for(i=1;i<mp['1'];i++) ans=ans+'1';
-        mp['1']=mp['1']-i;
-        for(i=0;i<mp['0'];i++) ans=ans+'0';
-        if(mp['1']==0) ans=ans+'1';
+        string ans=string(mp['1']-1,'1')+string(mp['0'], '0') + '1';
+        // cout<<mp['1'];
+        // for(i=1;i<mp['1'];i++) ans=ans+'1';
+        // mp['1']=mp['1']-i;
+        // for(i=0;i<mp['0'];i++) ans=ans+'0';
+        // if(mp['1']==0) ans=ans+'1';
         return ans;
     }
 };
