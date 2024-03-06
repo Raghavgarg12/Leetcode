@@ -16,8 +16,8 @@ public:
         ListNode* n2 = head;
         // Traverse the linked list using two pointers
         while(n2!=NULL && n2->next!=NULL){
-            n1=n1->next; // Move n1 one step at a time
-            n2=n2->next->next; // Move n2 two steps at a time
+            n1 = n1->next; // Move n1 one step at a time
+            n2 = n2->next->next; // Move n2 two steps at a time
         }
         return n1;
     }
