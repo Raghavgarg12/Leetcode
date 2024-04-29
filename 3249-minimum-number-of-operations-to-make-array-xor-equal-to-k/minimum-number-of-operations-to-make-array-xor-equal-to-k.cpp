@@ -7,7 +7,6 @@ public:
             ans = ans ^ nums[i];
         }
         ans=ans^k;
-        cout<<ans;
         while(ans!=0){
             sum += ans & 1;
             ans >>= 1;
