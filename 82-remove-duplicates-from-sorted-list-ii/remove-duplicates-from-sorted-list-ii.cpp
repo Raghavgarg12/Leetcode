@@ -17,7 +17,7 @@ public:
         ListNode* iter = head;
         while(iter!=NULL){
             if(iter->next && iter->val==iter->next->val){
-                while(iter->val == iter->next->val){
+                while(iter->next && iter->val == iter->next->val){
                     iter=iter->next;
                     if(!iter->next){
                         root->next=NULL;
@@ -25,11 +25,12 @@ public:
                     }
                 }
                 iter=iter->next;
-                continue;
             }
+            else{
             root->next=iter;
             root=iter;
             iter=iter->next;
+            }
         }
         return start->next;
     }
