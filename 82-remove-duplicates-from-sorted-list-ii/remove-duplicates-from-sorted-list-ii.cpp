@@ -27,7 +27,6 @@ public:
                 iter=iter->next;
                 continue;
             }
-            // root->val=iter->val;
             root->next=iter;
             root=iter;
             iter=iter->next;
