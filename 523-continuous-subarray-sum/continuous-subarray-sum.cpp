@@ -7,7 +7,6 @@ public:
         mp[0]=-1;
         for(int i=0;i<n;i++){
             res=(res+nums[i])%k;
-            cout<<res<<endl;
             if(mp.find(res)!=mp.end()){
                 if(i-mp[res]>1) return true;
             }
