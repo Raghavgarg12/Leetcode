@@ -1,20 +1,22 @@
 class Solution {
 public:
     vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
-        map<int,int>mp;
-        vector<int>ans;
-        for(auto x: arr1) mp[x]++;
-        for(auto x: arr2){
-            for(int i=0;i<mp[x];i++){
-                ans.push_back(x);
-            }
-            mp.erase(x);
-        }
-        for(auto x: mp){
-            for(int i=0;i<x.second;i++){
-                ans.push_back(x.first);
+        int maxElement = *max_element(arr1.begin(), arr1.end());
+        vector<int> count(maxElement + 1);
+        for (int x : arr1) count[x]++;
+        vector<int> result;
+        for (int element : arr2) {
+            while (count[element] > 0) {
+                result.push_back(element);
+                count[element]--;
             }
         }
-        return ans;
+        for (int num = 0; num <= maxElement; num++) {
+            while (count[num] > 0) {
+                result.push_back(num);
+                count[num]--;
+            }
+        }
+        return result;
     }
 };
