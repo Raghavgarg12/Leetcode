@@ -6,14 +6,8 @@ vector<string>ans;
             ans.push_back(s);
             return;
         }
-        else if(l==r){
-            check(s+'(',l-1,r);
-        }
-        else if(l==0) check(s+')',l,r-1);
-        else{
-            check(s+'(',l-1,r);
-            check(s+')',l,r-1);
-        }
+        if(l!=0) check(s+'(',l-1,r);
+        if(l<r) check(s+')',l,r-1);
     }
     vector<string> generateParenthesis(int n) {
         check("",n,n);
