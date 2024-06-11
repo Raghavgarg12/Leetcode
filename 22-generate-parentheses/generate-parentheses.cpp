@@ -10,8 +10,7 @@ vector<string>ans;
             check(s+'(',l-1,r);
         }
         else if(l==0) check(s+')',l,r-1);
-        else //if(l<r)
-        {
+        else{
             check(s+'(',l-1,r);
             check(s+')',l,r-1);
         }
