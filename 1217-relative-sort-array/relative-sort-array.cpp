@@ -5,10 +5,10 @@ public:
         vector<int> count(maxElement + 1);
         for (int x : arr1) count[x]++;
         vector<int> result;
-        for (int element : arr2) {
-            while (count[element] > 0) {
-                result.push_back(element);
-                count[element]--;
+        for (int x : arr2) {
+            while (count[x] > 0) {
+                result.push_back(x);
+                count[x]--;
             }
         }
         for (int num = 0; num <= maxElement; num++) {
