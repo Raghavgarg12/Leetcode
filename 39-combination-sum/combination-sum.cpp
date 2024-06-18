@@ -6,7 +6,8 @@ public:
             ans.push_back(temp);
             return;
         }
-        for(int i=start;i<nums.size() && nums[i]<=target;i++){
+        if(target<0) return;
+        for(int i=start;i<nums.size();i++){
             temp.push_back(nums[i]);
             check(temp, i, target-nums[i], nums);
             temp.pop_back();
