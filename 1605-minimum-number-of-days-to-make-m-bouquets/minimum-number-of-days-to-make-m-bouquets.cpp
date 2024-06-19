@@ -8,7 +8,6 @@ public:
         int mid,days,ans;
         while(low<=high){
             mid=(low+high)/2;
-            cout<<mid<<endl; //5 2 2 2 2 ...
             days=check(bloomDay,k,mid);
             if(days>=m) {
                 high=mid-1;
@@ -25,7 +24,6 @@ public:
             if(i<=mid) count++;
             if(count>=k) ans++, count=0;
         }
-        // cout<<ans<<endl; 3 2 2 2 2 ...
         return ans;
     }
 };
