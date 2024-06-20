@@ -20,4 +20,3 @@ vector<vector<int>>ans;
         return ans;
     }
 };
-//[1 1 2 2 5 6 7 10]
