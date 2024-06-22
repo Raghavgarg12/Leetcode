@@ -7,7 +7,6 @@ public:
             if(nums[i]%2==1) temp++;
         }
         for(int i=k;i<=n;i++){
-            cout<<"temp "<<temp<<endl;
             if(temp==k){
                 while(nums[l]%2==0){
                     l++;
@@ -19,8 +18,6 @@ public:
                     count2++;
                     i++;
                 }
-                cout<<count1<<count2<<endl;
-                // if(count1==0 || count2==0) ans+=count1+count2+1;
                 ans+=(count1+1)*(count2+1);
                 count1=0;
                 count2=0;
@@ -30,4 +27,3 @@ public:
         return ans;
     }
 };
-// 2 2 3 3 3 2 2 5 k=3
