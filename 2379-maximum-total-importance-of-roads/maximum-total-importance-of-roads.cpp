@@ -14,7 +14,9 @@ public:
         for(int i=0;i<n;i++){
             arr[i]={i,nums[i]};
         }
-        sort(arr.begin(),arr.end(),comp);
+        // sort(arr.begin(),arr.end(),comp);
+        sort(arr.begin(), arr.end(),
+             [](const auto& a, const auto& b) { return a.second < b.second; });
         for(int i=0;i<n;i++){
             arr[i].second=i+1;
             ans+=nums[arr[i].first]*arr[i].second;
