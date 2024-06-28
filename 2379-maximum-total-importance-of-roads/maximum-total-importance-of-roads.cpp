@@ -17,10 +17,7 @@ public:
         sort(arr.begin(),arr.end(),comp);
         for(int i=0;i<n;i++){
             arr[i].second=i+1;
-        }
-        sort(arr.begin(),arr.end());
-        for(int i=0;i<n;i++){
-            ans+=nums[i]*arr[i].second;
+            ans+=nums[arr[i].first]*arr[i].second;
         }
         return ans;
     }
