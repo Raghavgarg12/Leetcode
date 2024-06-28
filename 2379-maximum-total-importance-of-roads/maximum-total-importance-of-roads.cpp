@@ -1,8 +1,5 @@
 class Solution {
 public:
-    static bool comp(const pair<int,int>& a, const pair<int,int>& b) {
-    return a.second < b.second;
-}
     long long maximumImportance(int n, vector<vector<int>>& roads) {
         vector<long long>nums(n,0);
         long long ans=0;
