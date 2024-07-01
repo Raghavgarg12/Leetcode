@@ -8,7 +8,9 @@ public:
                     if(arr[i+2]%2==1){
                         return true;
                     }
+                    else i+=2;
                 }
+                else i++;
             }
         }
         return false;
