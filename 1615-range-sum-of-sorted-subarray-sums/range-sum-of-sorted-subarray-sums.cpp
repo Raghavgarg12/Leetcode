@@ -10,12 +10,10 @@ public:
             }
         }
         sort(subarr.begin(),subarr.end());
-        long long sum=0;
-        int mod=1e9+7;
+        int sum=0,mod=1e9+7;
         for(int i=left-1;i<right;i++){
-            sum+=subarr[i];
+            sum=(sum+subarr[i])%mod;
         }
-        sum=sum%mod;
         return sum;
     }
 };
