@@ -1,21 +1,15 @@
 class Solution {
 public:
     int minimumPushes(string word) {
-        unordered_map<char, int> frequencyMap;
-        for (char& c : word) {
-            ++frequencyMap[c];
+        int freq[26]={0};
+        for(char c: word) 
+            freq[c-'a']++;
+        sort(freq, freq+26, greater<int>());
+        int sz=0, push=1, ans=0;
+        for(; sz<26 && freq[sz]!=0; sz++){
+            if (sz>=8 && sz%8==0) push++;
+            ans+=freq[sz]*push;    
         }
-        priority_queue<int> frequencyQueue;
-        for (const auto& entry : frequencyMap) {
-            frequencyQueue.push(entry.second);
-        }
-        int totalPushes = 0;
-        int index = 0;
-        while (!frequencyQueue.empty()) {
-            totalPushes += (1 + (index / 8)) * frequencyQueue.top();
-            frequencyQueue.pop();
-            index++;
-        }
-        return totalPushes;
+        return ans;
     }
 };
