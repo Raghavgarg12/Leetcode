@@ -1,22 +1,19 @@
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
-        int i,n=nums.size(),j=0;
+        int i,n=nums.size(),a=0;
+        k=k%n;
+        reverse(nums.begin(),nums.begin()+n);
+        reverse(nums.begin(),nums.begin()+k);
+        reverse(nums.begin()+k,nums.end());
+        // reverse(nums,0,k-1);
         //int a=nums[n-1],j=0,b,l=j+k,z;
-        vector<int> arr(n);
         // while(k>0){
-        //     for(i=n-1;i>0;i--) nums[i]=nums[i-1];
-        //     nums[0]=a;
+        //     a=nums[n-1];
+        //     nums.pop_back();
+        //     nums.insert(nums.begin(),a);
         //     --k;
-        //     // for(i=0;i<n;i++) cout<<nums[i];
-        //     // cout<<endl;
-        // }
-        cout<<j<<endl;
-        for(i=0;i<n;i++){
-            j=i+k;
-            arr[j%n]=nums[i];
-        }
-        nums=arr;
+        //             }
         // b=nums[0];
         // a=nums[k];
         // for(i=0;i<n;i++){
